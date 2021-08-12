@@ -143,8 +143,8 @@ Use the getLastReview function below to do the following:
 // receive an array as a param
 
 function getLastReview(array) {
-  /*Your code here*/
-
+  array.length - 1;
+  return array;
  //return last array array.length -1 
 } 
 
@@ -166,7 +166,13 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
+ function getReviewByRating(array, rating) {
+   let ratingArray = []
+   for (let i = 0; i <array.length; i++){
+     if (array[i].rating >= rating && array[i].rating < rating + 1){
+       rating.push(array[i]);
+     }
+   }
     /* code here */
   }
 
