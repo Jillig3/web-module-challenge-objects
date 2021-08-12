@@ -49,7 +49,16 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  // method called discount and you are giving teachers and students a discount and public and different discount // you need to use this when referencing a ket inside a methode this.price// you are not updating the value of price - jsut returning the discounted price
+  discount: function(person){
+    if(person === 'student' || person === 'teacher'){
+      return this.price * 0.75;
+    }else if(person === 'public'){
+      return this.price * 0.9;
+    }else{
+    return this.price;
+    }
+  }
+  // method called discount and you are giving teachers and students a discount and public and different discount // you need to use this when referencing a ket inside a method this.price// you are not updating the value of price - jsut returning the discounted price
 }
 
 
@@ -94,7 +103,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 // pass array, name, rating, feedback as param
-function addReview(/*Your Code Here */){
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array;
   /*Your Code Here */
   //push object to end of array and return resulting array
 }
@@ -110,7 +121,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 //array, index
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(array, index) {
+  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}}`;
   /*Your code here*/
   // return the string "{array[index].name}"
 }
@@ -130,7 +142,7 @@ Use the getLastReview function below to do the following:
 */
 // receive an array as a param
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(array) {
   /*Your code here*/
 
  //return last array array.length -1 
