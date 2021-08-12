@@ -143,9 +143,9 @@ Use the getLastReview function below to do the following:
 // receive an array as a param
 
 function getLastReview(array) {
-  array.length - 1;
-  return array;
- //return last array array.length -1 
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`;
+   
+  //return last array array.length -1 
 } 
 
 
