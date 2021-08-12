@@ -122,10 +122,11 @@ Use the getReviewByIndex function below to do the following:
 
 //array, index
 function getReviewByIndex(array, index) {
-  return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}}`;
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`;
+}
   /*Your code here*/
   // return the string "{array[index].name}"
-}
+
 
 
   
